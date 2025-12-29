@@ -326,8 +326,8 @@ body {
     padding: 140px 0 60px;
     overflow: hidden;
     background:
-        url('images/bg-hero-left.png') no-repeat bottom left,
-        url('images/bg-hero-right.png') no-repeat top right,
+        url('images/line-edge-left.png') no-repeat bottom left,
+        url('images/line-edge-right.png') no-repeat top right,
         linear-gradient(135deg, #000000 0%, #000000 100%);
     background-size: auto, auto, 100% 100%;
 }
