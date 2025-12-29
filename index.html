@@ -4,391 +4,841 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Handal 2026 - Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a4d2e 0%, #1a7a4a 50%, #0a4d2e 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .bg-animation {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            animation: float 20s infinite;
-        }
-
-        .circle:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: -150px;
-            left: -150px;
-            animation-delay: 0s;
-        }
-
-        .circle:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            bottom: -100px;
-            right: -100px;
-            animation-delay: 4s;
-        }
-
-        .circle:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            top: 50%;
-            right: 10%;
-            animation-delay: 8s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) scale(1);
-                opacity: 0.5;
-            }
-
-            50% {
-                transform: translateY(-50px) scale(1.1);
-                opacity: 0.8;
-            }
-        }
-
-        .container {
-            text-align: center;
-            color: white;
-            z-index: 10;
-            padding: 20px;
-            max-width: 800px;
-            animation: fadeIn 1.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            width: 280px;
-            max-width: 90%;
-            margin-bottom: 40px;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-            animation: pulse 3s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            font-weight: bold;
-            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-            letter-spacing: 2px;
-        }
-
-        .subtitle {
-            font-size: 1.5em;
-            margin-bottom: 50px;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-
-        .time-box {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 25px 20px;
-            min-width: 100px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .time-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .time-value {
-            font-size: 3em;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .time-label {
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.9;
-        }
-
-        .notify-section {
-            margin-top: 40px;
-        }
-
-        .email-form {
-            display: flex;
-            gap: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .email-input {
-            flex: 1;
-            min-width: 250px;
-            padding: 15px 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-            font-size: 1em;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .email-input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .email-input:focus {
-            border-color: rgba(255, 255, 255, 0.6);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .notify-btn {
-            padding: 15px 40px;
-            background: white;
-            color: #0a4d2e;
-            border: none;
-            border-radius: 50px;
-            font-size: 1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-
-        .social-links {
-            margin-top: 50px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .social-icon:hover {
-            background: white;
-            transform: translateY(-5px) rotate(5deg);
-        }
-
-        .social-icon:hover svg {
-            fill: #0a4d2e;
-        }
-
-        .social-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .subtitle {
-                font-size: 1.2em;
-            }
-
-            .countdown {
-                gap: 15px;
-            }
-
-            .time-box {
-                min-width: 80px;
-                padding: 20px 15px;
-            }
-
-            .time-value {
-                font-size: 2em;
-            }
-
-            .email-input {
-                min-width: 100%;
-            }
-        }
-    </style>
+    <title>Beasiswa Developer Handal 2026</title>
+    <meta name="description"
+        content="Kuasai teknologi Edge Computing terkini dari Tencent EdgeOne dan raih karir impianmu. Daftar sekarang dan belajar gratis!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="bg-animation">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Beasiswa Developer Handal 2026" class="header-logo">
+                </div>
 
-    <div class="container">
-        <img src="https://www.devhandal.id/assets/img/logo-devhandal-white-new.png" alt="Developer Handal" class="logo">
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        <h1>Coming Soon</h1>
-        <p class="subtitle">Sesuatu yang luar biasa sedang dipersiapkan!</p>
-
-        <div class="countdown">
-            <div class="time-box">
-                <span class="time-value" id="days">00</span>
-                <span class="time-label">Hari</span>
-            </div>
-            <div class="time-box">
-                <span class="time-value" id="hours">00</span>
-                <span class="time-label">Jam</span>
-            </div>
-            <div class="time-box">
-                <span class="time-value" id="minutes">00</span>
-                <span class="time-label">Menit</span>
-            </div>
-            <div class="time-box">
-                <span class="time-value" id="seconds">00</span>
-                <span class="time-label">Detik</span>
+                <!-- Navigation Menu -->
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#materi" class="nav-link">Materi Kelas</a>
+                    <a href="#fasilitas" class="nav-link">Fasilitas</a>
+                    <a href="#misi" class="nav-link">Misi</a>
+                    <a href="#misi" class="nav-link">Misi</a>
+                    <div class="header-buttons">
+                        <a href="#login" class="btn btn-login">Login</a>
+                        <a href="#daftar" class="btn btn-primary">DAFTAR SEKARANG</a>
+                    </div>
+                </nav>
             </div>
         </div>
+    </header>
 
-        <div class="notify-section">
-            <div class="email-form">
-                <input type="email" class="email-input" placeholder="Masukkan email Anda" id="emailInput">
-                <button class="notify-btn" onclick="notifyMe()">Beritahu Saya</button>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Beasiswa <span class="highlight-text">DevHandal</span>
+                        2026
+                    </h1>
+                    <p class="hero-description">
+                        Kuasai teknologi Edge Computing terkini dari Tencent EdgeOne dan raih karir impianmu.
+                        <strong>Daftar sekarang dan belajar gratis!</strong>
+                    </p>
+                    <a href="#daftar" class="btn btn-cta">
+                        <span>DAFTAR BEASISWA SEKARANG - GRATIS</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <p class="hero-microcopy">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="7" stroke="#00E5FF" stroke-width="2" />
+                            <path d="M8 4V8L11 10" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Terbatas untuk talenta digital terbaik Indonesia.
+                    </p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="social-links">
-            <div class="social-icon">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                </svg>
-            </div>
-            <div class="social-icon">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-            </div>
-            <div class="social-icon">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
+    <!-- Statistics Section -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-banner-content">
+                <div class="stats-banner-left">
+                    <div class="stat-box">
+                        <div class="stat-value">2532</div>
+                        <div class="stat-label-banner">Total Pendaftar</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">1364</div>
+                        <div class="stat-label-banner">Penerima Beasiswa</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">186</div>
+                        <div class="stat-label-banner">Kuota Tersisa</div>
+                    </div>
+                </div>
+                <div class="stats-banner-right">
+                    <div class="stats-info">
+                        <strong>Informasi:</strong> Jumlah kuota akan terus berkurang sesuai dengan jumlah peserta yang
+                        telah menuntaskan misi dan klaim beasiswa
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        const targetDate = new Date('2026-01-01T00:00:00').getTime();
+    <!-- Program Overview -->
+    <section class="program-overview" id="overview">
+        <div class="container">
+            <h2 class="section-title">Kolaborasi Global untuk Developer Lokal</h2>
+            <div class="glass-card">
+                <div class="glass-card-content">
+                    <div class="overview-icon">
+                        <div class="partner-logos">
+                            <img src="https://image.web.id/images/headLogo.daeb48ad.png" alt="Tencent EdgeOne"
+                                class="partner-logo">
+                            <img src="https://image.web.id/images/codepolitan-logoc787963e27f753de.png"
+                                alt="Codepolitan" class="partner-logo">
+                        </div>
+                    </div>
+                    <p class="glass-card-text">
+                        Tencent EdgeOne hadir membawa revolusi <strong>security dan performance web</strong> ke
+                        Indonesia.
+                        Bersama CODEPOLITAN, kami ingin memastikan kamu tidak hanya jadi penonton,
+                        tapi <strong>pemain utama di industri 2026</strong>.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Gratis</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">300+</div>
+                            <div class="stat-label">Poin Quest</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Global</div>
+                            <div class="stat-label">Teknologi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Apa yang Akan Kamu Dapatkan</h2>
+            <p class="section-subtitle">Fasilitas eksklusif untuk peserta terpilih</p>
 
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z"
+                                stroke="#96E463" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 10V20L26 26" stroke="#96E463" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Lifetime Access Kelas Tencent EdgeOne</h3>
+                    <p class="benefit-desc">Akses materi selamanya, belajar kapanpun kamu mau.</p>
+                </div>
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.countdown').innerHTML = '<h2>Kami Telah Hadir!</h2>';
-            }
-        }
+                <!-- Benefit 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M20 5L24.6353 14.3895L35 15.8955L27.5 23.2058L29.2705 33.5279L20 28.6528L10.7295 33.5279L12.5 23.2058L5 15.8955L15.3647 14.3895L20 5Z"
+                                stroke="#96E463" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">BEASISWA BONUS: Fullstack JS React</h3>
+                    <p class="benefit-desc">Roadmap lengkap Fullstack JavaScript (Akses Seumur Hidup).</p>
+                </div>
 
-        function notifyMe() {
-            const email = document.getElementById('emailInput').value;
-            if (email && email.includes('@')) {
-                alert('Terima kasih! Kami akan mengirimkan notifikasi ke ' + email);
-                document.getElementById('emailInput').value = '';
-            } else {
-                alert('Mohon masukkan email yang valid');
-            }
-        }
+                <!-- Benefit 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M25 31.6667V35H15V31.6667M25 31.6667C26.7681 31.6667 28.4638 30.9643 29.714 29.714C30.9643 28.4638 31.6667 26.7681 31.6667 25C31.6667 18.3333 20 5 20 5C20 5 8.33333 18.3333 8.33333 25C8.33333 26.7681 9.03571 28.4638 10.286 29.714C11.5362 30.9643 13.2319 31.6667 15 31.6667H25Z"
+                                stroke="#96E463" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Sertifikat Digital</h3>
+                    <p class="benefit-desc">Bukti kompetensi resmi setelah menyelesaikan program.</p>
+                </div>
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+                <!-- Benefit 4 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M33.3333 11.6667V8.33334H6.66667V11.6667C6.66667 17.5 10 25.8333 20 25.8333C30 25.8333 33.3333 17.5 33.3333 11.6667Z"
+                                stroke="#96E463" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10 31.6667H30" stroke="#96E463" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M20 25.8333V31.6667" stroke="#96E463" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Tiket Lucky Draw</h3>
+                    <p class="benefit-desc">Kesempatan memenangkan 3 TWS & 1 Smartband.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8.33334" width="30" height="23.3333" rx="3.33333" stroke="#96E463"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 36.6667V31.6667" stroke="#96E463" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M13.3333 36.6667H26.6667" stroke="#96E463" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Webinar Eksklusif</h3>
+                    <p class="benefit-desc">Belajar langsung dari mentor berpengalaman.</p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8.33334" width="30" height="23.3333" rx="3.33333" stroke="#96E463"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 36.6667V31.6667" stroke="#96E463" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M13.3333 36.6667H26.6667" stroke="#96E463" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Meetup Eksklusif</h3>
+                    <p class="benefit-desc">Belajar langsung dari mentor berpengalaman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Quest: Misi & Sistem Poin -->
+    <section class="quest-section" id="quest">
+        <div class="container">
+            <h2 class="section-title">The Quest: Misi & Sistem Poin</h2>
+            <p class="section-subtitle">Selesaikan misi, kumpulkan poin, dan raih hadiahmu!</p>
+
+            <div class="quest-roadmap">
+                <div class="quest-item" data-aos="fade-up">
+                    <div class="quest-number">01</div>
+                    <div class="quest-content">
+                        <div class="quest-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M10 15L20 5L30 15M12 13V30C12 31.1 12.9 32 14 32H26C27.1 32 28 31.1 28 30V13"
+                                    stroke="#00E5FF" stroke-width="2" stroke-linecap="round" />
+                                <rect x="15" y="20" width="10" height="8" stroke="#00E5FF" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="quest-details">
+                            <h3 class="quest-title">Selesaikan Kelas Khusus</h3>
+                            <p class="quest-description">Belajar Deployment & AI Apps di EdgeOne</p>
+                            <div class="quest-points">+300 Poin</div>
+                        </div>
+                    </div>
+                    <div class="quest-connector"></div>
+                </div>
+
+                <div class="quest-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quest-number">02</div>
+                    <div class="quest-content">
+                        <div class="quest-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="8" y="8" width="24" height="24" rx="2" stroke="#00E5FF" stroke-width="2" />
+                                <path d="M12 16L16 20L24 12" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="quest-details">
+                            <h3 class="quest-title">Submit Project</h3>
+                            <p class="quest-description">Terapkan ilmu dan bangun portofolio nyatamu</p>
+                            <div class="quest-points">+200 Poin</div>
+                        </div>
+                    </div>
+                    <div class="quest-connector"></div>
+                </div>
+
+                <div class="quest-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quest-number">03</div>
+                    <div class="quest-content">
+                        <div class="quest-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="12" stroke="#00E5FF" stroke-width="2" />
+                                <path d="M15 15L25 20L15 25V15Z" fill="#00E5FF" />
+                            </svg>
+                        </div>
+                        <div class="quest-details">
+                            <h3 class="quest-title">Ikuti Live Session</h3>
+                            <p class="quest-description">Up-to-date dengan tren industri langsung dari ahlinya</p>
+                            <div class="quest-points">+100 Poin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bonus-box" data-aos="zoom-in">
+                <div class="bonus-icon">⚡</div>
+                <div class="bonus-content">
+                    <h3 class="bonus-title">BONUS FAST TRACK</h3>
+                    <p class="bonus-description">Selesaikan kelas dalam <strong>&lt;7 hari</strong> dan dapatkan
+                        tambahan <strong class="highlight">+200 Poin!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Will Learn -->
+    <section class="learning-section" id="learn">
+        <div class="container">
+            <h2 class="section-title">Kurikulum Masa Depan: Revolusi Deployment & AI</h2>
+
+            <div class="learning-grid">
+                <div class="learning-item" data-aos="fade-right">
+                    <div class="learning-check">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#0052D9" />
+                            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="learning-content">
+                        <h3 class="learning-title">Konsep Cloud & Edge Computing 2026</h3>
+                        <p class="learning-description">Pahami fundamental teknologi yang mengubah industri web
+                            development</p>
+                    </div>
+                </div>
+
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="learning-check">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#0052D9" />
+                            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="learning-content">
+                        <h3 class="learning-title">Deploy Aplikasi Global dalam Hitungan Menit</h3>
+                        <p class="learning-description">Praktik langsung deployment dengan EdgeOne Pages</p>
+                    </div>
+                </div>
+
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="learning-check">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#0052D9" />
+                            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="learning-content">
+                        <h3 class="learning-title">Optimasi Keamanan & Performa Tingkat Enterprise</h3>
+                        <p class="learning-description">Kuasai teknik security dan performance optimization terkini</p>
+                    </div>
+                </div>
+
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="learning-check">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#0052D9" />
+                            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="learning-content">
+                        <h3 class="learning-title">Integrasi AI Assist untuk Koding Lebih Produktif</h3>
+                        <p class="learning-description">Leverage AI untuk meningkatkan produktivitas development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title">Timeline Program</h2>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-track"></div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">30 Des 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Pembukaan Registrasi</h3>
+                        <p class="timeline-description">Pendaftaran dibuka untuk seluruh Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">5 Jan 2026</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Live Launching & Kick-off</h3>
+                        <p class="timeline-description">Sesi pembukaan dan pengenalan program</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">24 Jan 2026</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Live Session: "Fast & Secure Web with EdgeOne"</h3>
+                        <p class="timeline-description">Deep dive langsung dari expert tentang EdgeOne</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-date">7 Feb 2026</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Closing Ceremony & Pengumuman Pemenang</h3>
+                        <p class="timeline-description">Penutupan program dan pengumuman winners!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="daftar">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Siap Jadi Developer Handal 2026?</h2>
+                <p class="cta-subtitle">Jangan lewatkan kesempatan emas belajar langsung dengan teknologi kelas dunia.
+                </p>
+                <a href="https://codepolitan.com/beasiswa-developer-handal-2026" class="btn btn-final-cta">
+                    <span>SAYA MAU JOIN BEASISWA INI</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="cta-glow-left"></div>
+        <div class="cta-glow-right"></div>
+    </section>
+
+    <!-- Testimony Section -->
+    <section class="testimony-section" id="testimony">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Alumni DevHandal?</h2>
+            <p class="section-subtitle">Dengar langsung pengalaman mereka yang telah berhasil transform karir melalui
+                program ini.</p>
+
+            <div class="testimony-grid">
+                <!-- Testimony 1 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Rizky+Pratama&background=0D8ABC&color=fff"
+                            alt="Rizky" class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Rizky Pratama</h4>
+                            <span class="testimony-ig">@rizky.dev</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Gak nyangka materi EdgeOne sekomplit ini! Awalnya bingung soal cloud,
+                        sekarang udah bisa deploy aplikasi global sendiri. Worth it banget!"</p>
+                </div>
+
+                <!-- Testimony 2 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Amalia&background=random&color=fff" alt="Sarah"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Sarah Amalia</h4>
+                            <span class="testimony-ig">@sarahcodes</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Sertifikatnya beneran kepake buat lamar kerja. Recruiter langsung notice
+                        skill Edge Computing yang aku dapet dari sini."</p>
+                </div>
+
+                <!-- Testimony 3 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=random&color=fff" alt="Budi"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Budi Santoso</h4>
+                            <span class="testimony-ig">@budisan_tech</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Komunitasnya solid parah! Tiap ada error pasti ada yang bantuin di grup.
+                        Mentornya juga fast response."</p>
+                </div>
+
+                <!-- Testimony 4 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Anita+Wijaya&background=random&color=fff" alt="Anita"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Anita Wijaya</h4>
+                            <span class="testimony-ig">@anita.uiux</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Bonus course React-nya daging banget. Belajar fundamental sampe advanced,
+                        sekarang lagi bangun project portofolio pake stack ini."</p>
+                </div>
+
+                <!-- Testimony 5 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Dimas+Anggara&background=random&color=fff"
+                            alt="Dimas" class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Dimas Anggara</h4>
+                            <span class="testimony-ig">@dimas_ngoding</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Tantangan codingnya seru! Bikin makin paham konsep karena learning by
+                        doing. Hadiahnya juga oke banget buat motivasi."</p>
+                </div>
+
+                <!-- Testimony 6 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Fina+Putri&background=random&color=fff" alt="Fina"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Fina Putri</h4>
+                            <span class="testimony-ig">@finatech_</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Platform belajarnya enak, UI/UX nya nyaman. Materi videonya jelas dan to
+                        the point, gak bertele-tele."</p>
+                </div>
+
+                <!-- Testimony 7 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Eko+Kurniawan&background=random&color=fff" alt="Eko"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Eko Kurniawan</h4>
+                            <span class="testimony-ig">@ekokurniawan.js</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Sebagai pemula, roadmap ini ngebantu banget biar gak tersesat belajar.
+                        Step-stepnya logis dan terstruktur rapi."</p>
+                </div>
+
+                <!-- Testimony 8 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Maya+Sari&background=random&color=fff" alt="Maya"
+                            class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Maya Sari</h4>
+                            <span class="testimony-ig">@mayasari.dev</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Webinar eksklusifnya keren banget speaker-speakernya. Dapet insight
+                        industri yang gak ada di google."</p>
+                </div>
+
+                <!-- Testimony 9 -->
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <img src="https://ui-avatars.com/api/?name=Reza+Rahardian&background=random&color=fff"
+                            alt="Reza" class="testimony-avatar">
+                        <div class="testimony-meta">
+                            <h4 class="testimony-name">Reza Rahardian</h4>
+                            <span class="testimony-ig">@rezar_code</span>
+                        </div>
+                    </div>
+                    <p class="testimony-text">"Best decision tahun ini join DevHandal. Skill upgrade, networking dapet,
+                        portofolio nambah. Recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Partner Section -->
+    <section class="media-section">
+        <div class="container">
+            <h2 class="section-title">Media Partner</h2>
+            <div class="media-grid">
+                <!-- Media 1: Warta Kota -->
+                <a href="https://wartakota.tribunnews.com/2023/09/17/ada-beasiswa-belajar-coding-1-tahun-untuk-3-ribu-orang-dari-codepolitan-dan-alibaba-cloud"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/wartakota.png" alt="Warta Kota" class="media-logo">
+                </a>
+
+                <!-- Media 2: Viva -->
+                <a href="https://www.viva.co.id/digital/digilife/1637994-siap-unjuk-taring-usai-ngilmu-coding"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/viva.png" alt="Viva.co.id" class="media-logo">
+                </a>
+
+                <!-- Media 3: Kompas -->
+                <a href="https://www.kompas.tv/saintek/443922/developer-handal-belajar-coding-gratis-dari-codepolitan-dan-alibaba-cloud"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/kompas.png" alt="Kompas TV" class="media-logo">
+                </a>
+
+                <!-- Media 4: Media Indonesia -->
+                <a href="https://mediaindonesia.com/teknologi/613732/codepolitan-dan-alibaba-cloud-buka-program-developer-handal"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/media-indonesia.png" alt="Media Indonesia" class="media-logo">
+                </a>
+
+                <!-- Media 5: SWA -->
+                <a href="https://swa.co.id/swa/trends/developer-handal-berikan-beasiswa-coding-dan-sertifikasi-internasional"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/swa.png" alt="SWA" class="media-logo">
+                </a>
+
+                <!-- Media 6: Info Komputer -->
+                <a href="https://infokomputer.grid.id/read/123894383/codepolitan-dan-alibaba-cloud-gelar-program-beasiswa-belajar-coding"
+                    target="_blank" class="media-item">
+                    <img src="https://image.web.id/images/infokomputer.png" alt="Info Komputer" class="media-logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Masih Punya Pertanyaan Sebelum Memulai?</h2>
+            <p class="section-subtitle">Kami ingin kamu merasa 100% yakin dengan keputusanmu. Berikut adalah jawaban
+                dari beberapa hal yang sering ditanyakan oleh calon developer seperti kamu.</p>
+
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apakah roadmap ini cocok untuk pemula yang belum pernah coding sama sekali?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Tentu saja! Program ini dirancang dari dasar (zero to hero). Kamu akan mulai dari konsep
+                            fundamental hingga deployment aplikasi yang kompleks, dipandu langkah demi langkah.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apakah saya harus berlangganan setiap bulan?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Tidak, ini adalah sekali bayar untuk akses seumur hidup (Lifetime Access). Kamu tidak perlu
+                            khawatir dengan biaya bulanan atau tahunan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Bagaimana cara kerja Platform Tanya Jawabnya?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Kamu akan mendapatkan akses ke forum diskusi eksklusif di mana kamu bisa bertanya sepuasnya
+                            dan akan dijawab langsung oleh mentor atau instruktur berpengalaman.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apakah saya harus membeli tools AI (Windsurf/Copilot) secara terpisah?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Tidak wajib. Kami akan mengajarkan cara menggunakan versi gratis atau trial yang tersedia,
+                            namun memiliki tools tersebut akan mempercepat proses belajar kamu.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Saya bukan lulusan IT, apakah saya tetap bisa dapat kerja?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Sangat bisa! Banyak lulusan bootcamp kami yang berasal dari background non-IT berhasil
+                            switch career menjadi developer profesional karena portofolio yang mereka bangun di sini.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Berapa lama waktu yang dibutuhkan untuk menyelesaikan semua materi?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Rata-rata peserta menyelesaikannya dalam 3-6 bulan jika belajar paruh waktu. Karena aksesnya
+                            seumur hidup, kamu bisa belajar sesuai kecepatanmu sendiri.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apakah saya akan mendapatkan sertifikat?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Ya, kamu akan mendapatkan sertifikat penyelesaian digital yang bisa kamu lampirkan di
+                            LinkedIn atau CV kamu setelah menyelesaikan semua materi dan project.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apa bedanya belajar di sini dengan menonton tutorial gratis di YouTube?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Di sini kamu mendapatkan kurikulum terstruktur, studi kasus nyata, code review, dan dukungan
+                            komunitas yang tidak bisa kamu dapatkan dari tutorial acak di YouTube.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Spesifikasi laptop seperti apa yang saya butuhkan?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Laptop dengan RAM minimal 8GB (disarankan 16GB) dan prosesor i5/Ryzen 5 generasi terbaru
+                            sudah cukup mumpuni untuk mengikuti materi ini.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Apakah materi ini akan terus diupdate?</span>
+                        <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Ya, teknologi web berkembang cepat. Kami berkomitmen untuk memperbarui materi agar tetap
+                            relevan dengan industri terkini tanpa biaya tambahan untuk alumni.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-box" data-aos="fade-up">
+                <div class="help-content">
+                    <h3>Masih bingung atau punya pertanyaan lain?</h3>
+                    <p>Gabung ke grup Telegram kami dan tanyakan langsung kepada tim support kami.</p>
+                </div>
+                <a href="#" class="btn btn-telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 3.816 1.177l.176.056c.87.271 1.714.529 2.61.82 2.61 1.076 5.222 2.152 7.825 3.206 1.258.463 3.42 1.621 5.37-3.328 1.956-6.19 3.016-10.957 3.322-12.203.047-.196.068-.415.01-.628a.987.987 0 0 0-.377-.525 1.705 1.705 0 0 0-.894-.38z" />
+                        <path d="M9.626 13.918 9.5 21.5l3.226-2.915c.618-.557 1.235-1.113 1.879-1.636l-5.46-3.238z" />
+                    </svg>
+                    Gabung Grup Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Beasiswa Developer Handal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
