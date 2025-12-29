@@ -530,14 +530,14 @@ body {
 .stat-value {
     font-size: 64px;
     font-weight: 900;
-    color: #FFFFFF;
+    color: #68E2F3;
     margin-bottom: 12px;
     line-height: 1;
     letter-spacing: -2px;
 }
 
 .stat-label-banner {
-    font-size: 15px;
+    font-size: 12px;
     color: #FFFFFF;
     font-weight: 600;
     text-transform: uppercase;
@@ -859,7 +859,7 @@ body {
 .program-overview {
     padding: var(--section-padding);
     position: relative;
-    background: var(--light-bg-1);
+    background: url('images/line.png') no-repeat bottom right, var(--light-bg-1);
 }
 
 .glass-card {
@@ -917,8 +917,8 @@ body {
 }
 
 .glass-card-text strong {
-    color: var(--codepolitan-green);
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
 }
 
 .stats-grid {
@@ -934,12 +934,10 @@ body {
 
 .stat-number {
     font-size: 48px;
-    font-weight: 800;
-    background: var(--codepolitan-green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 900;
+    color: #2971F6;
     margin-bottom: 8px;
+    line-height: 1;
 }
 
 .stat-label {
@@ -1507,6 +1505,43 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    /* === MOBILE NAVIGATION === */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #000000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        gap: 24px;
+        transition: 0.3s ease-in-out;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        width: 80%;
+        gap: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     :root {
         --section-padding: 80px 0;
     }
@@ -1527,6 +1562,8 @@ body {
     .hero {
         padding: 120px 0 60px;
         min-height: auto;
+        /* Remove background images for better readability */
+        background: linear-gradient(135deg, #0024B1 0%, #000000 100%);
     }
 
     .hero-title {
