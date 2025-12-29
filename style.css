@@ -326,9 +326,9 @@ body {
     padding: 140px 0 60px;
     overflow: hidden;
     background:
-        url('images/bg-hero-right.png') no-repeat top right,
         url('images/bg-hero-left.png') no-repeat bottom left,
-        linear-gradient(135deg, #0024AF 0%, #2970F6 100%);
+        url('images/bg-hero-right.png') no-repeat top right,
+        linear-gradient(135deg, #000000 0%, #000000 100%);
     background-size: auto, auto, 100% 100%;
 }
 
