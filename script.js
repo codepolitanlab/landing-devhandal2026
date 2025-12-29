@@ -86,11 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentScroll = window.pageYOffset;
 
         if (currentScroll > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            header.style.background = 'rgba(0, 0, 0, 0.95)';
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
+            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
         } else {
-            header.style.background = 'rgba(255, 255, 255, 1)';
-            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
+            header.style.background = '#000000';
+            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
+            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
         }
 
         lastScroll = currentScroll;
