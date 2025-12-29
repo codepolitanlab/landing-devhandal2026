@@ -328,7 +328,7 @@ body {
     background:
         url('images/line-edge-left.png') no-repeat bottom left,
         url('images/line-edge-right.png') no-repeat top right,
-        linear-gradient(135deg, #000000 0%, #000000 100%);
+        linear-gradient(135deg, #3F86FF 0%, #012388 100%);
     background-size: auto, auto, 100% 100%;
 }
 
