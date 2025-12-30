@@ -1418,7 +1418,10 @@ body {
 
 /* === BENEFITS SECTION === */
 .benefits-section {
-    background-color: #EEE4DB;
+    background-color: #E7F1F3;
+    background-image: url('images/bg-indo-soft-blue.png');
+    background-size: cover;
+    background-position: center;
     padding: 100px 0;
 }
 
