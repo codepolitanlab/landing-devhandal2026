@@ -1280,7 +1280,11 @@ body {
 /* === FINAL CTA === */
 .final-cta {
     padding: 100px 0;
-    background: #E7F1F3;
+    background:
+        url('images/bg-hero-left.png') no-repeat bottom left,
+        url('images/bg-hero-right.png') no-repeat bottom right,
+        linear-gradient(135deg, #E7F1F3 0%, #E7F1F3 100%);
+    background-size: auto, auto, 100% 100%;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -2120,5 +2124,93 @@ body {
 
     .lucky-draw-description {
         margin: 0 auto;
+    }
+}
+
+/* === WHY JOIN SECTION === */
+.why-join-section {
+    padding: var(--section-padding);
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.why-join-section .section-title {
+    color: #000000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.why-join-section .section-subtitle {
+    color: var(--gray-text);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.why-join-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-join-card {
+    background: #E7F1F3;
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.why-join-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(41, 113, 246, 0.15);
+    border-color: #2971F6;
+}
+
+.why-join-icon {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-join-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.why-join-description {
+    font-size: 15px;
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* Responsive design for why-join section */
+@media (max-width: 1024px) {
+    .why-join-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-join-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .why-join-card {
+        padding: 32px 24px;
+    }
+
+    .why-join-title {
+        font-size: 18px;
+    }
+
+    .why-join-description {
+        font-size: 14px;
     }
 }
