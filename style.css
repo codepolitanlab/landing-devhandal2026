@@ -960,7 +960,11 @@ body {
 .quest-section {
     padding: var(--section-padding);
     position: relative;
-    background: #000000;
+    background:
+        url('images/bg-right-tencent.png') no-repeat top right,
+        url('images/bg-left-tencent.png') no-repeat top left,
+        #000000;
+    background-size: auto, auto, cover;
 }
 
 .quest-section .section-title {
