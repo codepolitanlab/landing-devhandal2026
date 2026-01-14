@@ -737,30 +737,11 @@ body {
     border-radius: 12px;
     overflow: hidden;
     transition: var(--transition-smooth);
+    padding: 14px;
 }
 
 .accordion-item.active {
     box-shadow: 0 4px 16px rgba(0, 200, 150, 0.1);
-}
-
-.accordion-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--dark-text);
-    transition: var(--transition-smooth);
-}
-
-.accordion-header:hover {
-    color: #2971F6;
 }
 
 .accordion-icon {
@@ -782,7 +763,7 @@ body {
 }
 
 .accordion-body {
-    padding: 0 24px 24px;
+    padding: 24px;
     font-size: 16px;
     line-height: 1.6;
     color: var(--gray-text);
