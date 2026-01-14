@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,9 +22,9 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-container">
+                <a class="logo-container" href="/#">
                     <img src="images/logo-devhandal-white.png" alt="Beasiswa Developer Handal 2026" class="header-logo">
-                </div>
+                </a>
 
                 <!-- Hamburger Menu Button -->
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -33,12 +35,14 @@
 
                 <!-- Navigation Menu -->
                 <nav class="nav-menu" id="navMenu">
-                    <a href="#materi" class="nav-link">Materi Kelas</a>
-                    <a href="#fasilitas" class="nav-link">Fasilitas</a>
-                    <a href="#misi" class="nav-link">Misi</a>
-                    <a href="#misi" class="nav-link">Misi</a>
+                    <a href="#benefits" class="nav-link">Benefit</a>
+                    <a href="#program-detail" class="nav-link">Materi Kelas</a>
+                    <a href="#steps" class="nav-link">Cara Gabung</a>
+                    <a href="#missions" class="nav-link">Misi</a>
+                    <a href="leaderboard.html" class="nav-link">Leaderboard</a>
                     <div class="header-buttons">
-                        <a href="#login" class="btn btn-login">Login</a>
+                        <a href="https://www.codepolitan.com/login?callback=https://dashboard.codepolitan.com/devhandal2026"
+                            class="btn btn-login">Login</a>
                         <a href="#daftar" class="btn btn-primary">DAFTAR SEKARANG</a>
                     </div>
                 </nav>
@@ -75,7 +79,7 @@
                     </p>
                 </div>
                 <div class="hero-image">
-                    <img src="images/ilustrasi-edge.png" alt="DevHandal Hero Illustration">
+                    <img src="images/hero-image.png" alt="DevHandal Hero">
                 </div>
             </div>
         </div>
@@ -154,7 +158,7 @@
         <div class="container">
             <div class="program-detail-grid">
                 <div class="program-detail-image">
-                    <img src="images/default.png" alt="Benefits Illustration">
+                    <img src="https://image.web.id/images/clipboard-image-1768374050.png" alt="Benefits Illustration">
                 </div>
                 <div class="program-detail-content">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">Apa yang Akan Kamu Dapatkan
@@ -194,11 +198,11 @@
     </section>
 
     <!-- Program Detail Section -->
-    <section class="program-detail-section">
+    <section class="program-detail-section" id="program-detail">
         <div class="container">
             <div class="program-detail-grid">
                 <div class="program-detail-image">
-                    <img src="images/default.png" alt="Program Illustration">
+                    <img src="https://image.web.id/images/clipboard-image-1768374151.png" alt="Program Illustration">
                 </div>
                 <div class="program-detail-content">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Kuasai teknologi Edge
@@ -208,7 +212,24 @@
                     <p>Program ini GRATIS dan cara mendapatkannya juga cukup mudah. Kamu hanya perlu mengikuti arahan
                         dan menyelesaikan tugas-tugas yang ada. Jadi tunggu apa lagi? Jangan sia-siakan kesempatan ini
                         dan daftar sekarang juga!</p>
-                    <a href="#" class="btn btn-secondary">Lihat Silabus</a>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#silabus1Modal">Lihat Silabus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Silabus 1 -->
+        <div class="modal fade" id="silabus1Modal" tabindex="-1" aria-labelledby="silabus1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="silabus1ModalLabel">Silabus</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,10 +245,28 @@
                     <p>Selesaikan semua misi dan dapatlan kelas bonus React.js Lifetime senilai Rp 750.000. Menang
                         banyak dengan cara mudah.</p>
 
-                    <a href="#" class="btn btn-secondary" style="margin-top: 24px;">Lihat Silabus</a>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#silabus2Modal">Lihat Silabus</button>
                 </div>
                 <div class="program-detail-image">
-                    <img src="images/default.png" alt="DevHandal Benefits Illustration">
+                    <img src="https://image.web.id/images/clipboard-image-1768374251-1.png"
+                        alt="DevHandal Benefits Illustration">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Silabus 2 -->
+        <div class="modal fade" id="silabus2Modal" tabindex="-1" aria-labelledby="silabus2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="silabus2ModalLabel">Silabus</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
                 </div>
             </div>
         </div>
@@ -280,7 +319,7 @@
     </section>
 
     <!-- The Quest: Misi & Sistem Poin -->
-    <section class="quest-section" id="quest">
+    <section class="quest-section" id="missions">
         <div class="container">
             <h2 class="section-title">The Quest: Misi & Sistem Poin</h2>
             <p class="section-subtitle">Selesaikan misi, kumpulkan poin, dan raih hadiahmu!</p>
@@ -312,10 +351,24 @@
 
                 </div>
 
-                <div class="quest-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="quest-item" data-aos="fade-up">
 
                     <div class="quest-content">
                         <div class="quest-icon">3</div>
+                        <div class="quest-details">
+                            <h3 class="quest-title">Selesaikan Kelas Khusus dalam 7 hari</h3>
+                            <p class="quest-description">Bonus poin bagi yang menyelesaikan kelas dalam 7 hari (sejak
+                                claim voucher). Total bonus poin akan berkurang setiap 1 jam.</p>
+                            <div class="quest-points">+200 Poin</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="quest-item" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="quest-content">
+                        <div class="quest-icon">4</div>
                         <div class="quest-details">
                             <h3 class="quest-title">Ikuti Live Session</h3>
                             <p class="quest-description">Up-to-date dengan tren industri langsung dari ahlinya</p>
@@ -333,14 +386,15 @@
             <div class="lucky-draw-grid">
                 <div class="lucky-draw-text" data-aos="fade-right">
                     <h2 class="section-title" style="text-align: left;"><span class="highlight-cyan">Lucky Draw</span>
-                        untuk Peserta<br>Rajin dan Beruntung!</h2>
+                        untuk Peserta Rajin dan Beruntung!</h2>
                     <p class="lucky-draw-description">
-                        Kamu juga berkesempatan mendapatkan hadiah tambahan seperti Mac Mini, Samsung Monitor, Smartband
-                        Huawei, Smartphone dan Logam Mulia.
+                        Kamu juga berkesempatan untuk meraih berbagai hadiah menarik dari program ini. Jangan lewatkan
+                        kesempatan
+                        ini dan join program DevHandal 2026 sekarang juga!
                     </p>
                 </div>
                 <div class="lucky-draw-image" data-aos="fade-left">
-                    <img src="https://image.web.id/images/imageba3113850bdc996b.png" alt="Lucky Draw Prizes">
+                    <img src="https://image.web.id/images/clipboard-image-1768375986.png" alt="Lucky Draw Prizes">
                 </div>
             </div>
         </div>
@@ -427,7 +481,7 @@
 
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">30 Des 2025</div>
+                    <div class="timeline-date">17 Jan 2026</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Pembukaan Registrasi</h3>
                         <p class="timeline-description">Pendaftaran dibuka untuk seluruh Indonesia</p>
@@ -436,7 +490,7 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">5 Jan 2026</div>
+                    <div class="timeline-date">24 Jan 2026</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Live Launching & Kick-off</h3>
                         <p class="timeline-description">Sesi pembukaan dan pengenalan program</p>
@@ -445,7 +499,7 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">24 Jan 2026</div>
+                    <div class="timeline-date">28 Jan 2026</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Live Session: "Fast & Secure Web with EdgeOne"</h3>
                         <p class="timeline-description">Deep dive langsung dari expert tentang EdgeOne</p>
@@ -454,7 +508,7 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">7 Feb 2026</div>
+                    <div class="timeline-date">15 Feb 2026</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Closing Ceremony & Pengumuman Pemenang</h3>
                         <p class="timeline-description">Penutupan program dan pengumuman winners!</p>
@@ -471,7 +525,8 @@
                 <h2 class="cta-title">Siap Jadi Developer Handal 2026?</h2>
                 <p class="cta-subtitle">Jangan lewatkan kesempatan emas belajar langsung dengan teknologi kelas dunia.
                 </p>
-                <a href="https://codepolitan.com/beasiswa-developer-handal-2026" class="btn btn-final-cta">
+                <a href="https://www.codepolitan.com/login?callback=https://dashboard.codepolitan.com/devhandal2026"
+                    class="btn btn-final-cta">
                     <span>SAYA MAU JOIN BEASISWA INI</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
@@ -489,133 +544,7 @@
             <p class="section-subtitle">Dengar langsung pengalaman mereka yang telah berhasil transform karir melalui
                 program ini.</p>
 
-            <div class="testimony-grid">
-                <!-- Testimony 1 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Rizky+Pratama&background=0D8ABC&color=fff"
-                            alt="Rizky" class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Rizky Pratama</h4>
-                            <span class="testimony-ig">@rizky.dev</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Gak nyangka materi EdgeOne sekomplit ini! Awalnya bingung soal cloud,
-                        sekarang udah bisa deploy aplikasi global sendiri. Worth it banget!"</p>
-                </div>
-
-                <!-- Testimony 2 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Sarah+Amalia&background=random&color=fff" alt="Sarah"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Sarah Amalia</h4>
-                            <span class="testimony-ig">@sarahcodes</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Sertifikatnya beneran kepake buat lamar kerja. Recruiter langsung notice
-                        skill Edge Computing yang aku dapet dari sini."</p>
-                </div>
-
-                <!-- Testimony 3 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=random&color=fff" alt="Budi"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Budi Santoso</h4>
-                            <span class="testimony-ig">@budisan_tech</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Komunitasnya solid parah! Tiap ada error pasti ada yang bantuin di grup.
-                        Mentornya juga fast response."</p>
-                </div>
-
-                <!-- Testimony 4 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Anita+Wijaya&background=random&color=fff" alt="Anita"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Anita Wijaya</h4>
-                            <span class="testimony-ig">@anita.uiux</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Bonus course React-nya daging banget. Belajar fundamental sampe advanced,
-                        sekarang lagi bangun project portofolio pake stack ini."</p>
-                </div>
-
-                <!-- Testimony 5 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Dimas+Anggara&background=random&color=fff"
-                            alt="Dimas" class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Dimas Anggara</h4>
-                            <span class="testimony-ig">@dimas_ngoding</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Tantangan codingnya seru! Bikin makin paham konsep karena learning by
-                        doing. Hadiahnya juga oke banget buat motivasi."</p>
-                </div>
-
-                <!-- Testimony 6 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Fina+Putri&background=random&color=fff" alt="Fina"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Fina Putri</h4>
-                            <span class="testimony-ig">@finatech_</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Platform belajarnya enak, UI/UX nya nyaman. Materi videonya jelas dan to
-                        the point, gak bertele-tele."</p>
-                </div>
-
-                <!-- Testimony 7 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Eko+Kurniawan&background=random&color=fff" alt="Eko"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Eko Kurniawan</h4>
-                            <span class="testimony-ig">@ekokurniawan.js</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Sebagai pemula, roadmap ini ngebantu banget biar gak tersesat belajar.
-                        Step-stepnya logis dan terstruktur rapi."</p>
-                </div>
-
-                <!-- Testimony 8 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Maya+Sari&background=random&color=fff" alt="Maya"
-                            class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Maya Sari</h4>
-                            <span class="testimony-ig">@mayasari.dev</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Webinar eksklusifnya keren banget speaker-speakernya. Dapet insight
-                        industri yang gak ada di google."</p>
-                </div>
-
-                <!-- Testimony 9 -->
-                <div class="testimony-card">
-                    <div class="testimony-header">
-                        <img src="https://ui-avatars.com/api/?name=Reza+Rahardian&background=random&color=fff"
-                            alt="Reza" class="testimony-avatar">
-                        <div class="testimony-meta">
-                            <h4 class="testimony-name">Reza Rahardian</h4>
-                            <span class="testimony-ig">@rezar_code</span>
-                        </div>
-                    </div>
-                    <p class="testimony-text">"Best decision tahun ini join DevHandal. Skill upgrade, networking dapet,
-                        portofolio nambah. Recommended!"</p>
-                </div>
-            </div>
+            <div class="testimony-grid" id="testimony-list"></div>
         </div>
     </section>
 
@@ -847,7 +776,8 @@
                     <h3>Masih bingung atau punya pertanyaan lain?</h3>
                     <p>Gabung ke grup Telegram kami dan tanyakan langsung kepada tim support kami.</p>
                 </div>
-                <a href="#" class="btn btn-telegram">
+                <a href="https://t.me/codepolitan/" class="btn btn-telegram" style="color: white;" target="_blank"
+                    rel="noopener noreferrer">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path
@@ -864,12 +794,41 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 Beasiswa Developer Handal. All rights reserved.</p>
+                <p>&copy; 2026 Beasiswa Developer Handal. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Testimony Data -->
+    <script>
+        fetch("./data/testimonials.json")
+            .then(res => res.json())
+            .then(testimonials => {
+                const list = document.getElementById("testimony-list");
+
+                testimonials.forEach(item => {
+                    list.innerHTML += `
+                    <div class="testimony-card">
+                        <div class="testimony-header">
+                            <img src="${item.thumbnail}" alt="${item.name}"
+                                class="testimony-avatar">
+                            <div class="testimony-meta">
+                                <h4 class="testimony-name">${item.name}</h4>
+                                <span class="testimony-ig">${item.instagram}</span>
+                            </div>
+                        </div>
+                        <p class="testimony-text">"${item.description}"</p>
+                    </div>
+                `;
+                });
+            });
+    </script>
+
+    <!-- Main JS -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

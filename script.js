@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 navMenu.classList.remove('active');
             }
         });
+
+        // Close menu when clicking links or buttons inside the menu
+        navMenu.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
     }
 
     // ========================================
