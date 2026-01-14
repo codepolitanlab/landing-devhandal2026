@@ -86,32 +86,7 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="stats-banner">
-        <div class="container">
-            <div class="stats-banner-content">
-                <div class="stats-banner-left">
-                    <div class="stat-box">
-                        <div class="stat-value">2532</div>
-                        <div class="stat-label-banner">Total Pendaftar</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value">1364</div>
-                        <div class="stat-label-banner">Lulus Seleksi</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value">186</div>
-                        <div class="stat-label-banner">Kuota Tersisa</div>
-                    </div>
-                </div>
-                <div class="stats-banner-right">
-                    <div class="stats-info">
-                        <strong>Informasi:</strong> Jumlah kuota akan terus berkurang sesuai dengan jumlah peserta yang
-                        telah menuntaskan misi dan klaim beasiswa
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="stats-banner" id="stats"></section>
 
     <!-- Program Overview -->
     <section class="program-overview" id="overview">
@@ -228,7 +203,102 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <div class="accordion" id="accordionGitPemula">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingGitPemula">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseGitPemula" aria-expanded="true"
+                                        aria-controls="collapseGitPemula">
+                                        Belajar Git Pemula
+                                    </button>
+                                </h2>
+                                <div id="collapseGitPemula" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingGitPemula" data-bs-parent="#accordionGitPemula">
+                                    <div class="accordion-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Pendahuluan</span>
+                                                <span class="text-muted">11:40</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Panduan
+                                                    Instalasi GIT</span>
+                                                <span class="text-muted">03:38</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Macam-macam Perintah GIT Dasar</span>
+                                                <span class="text-muted">02:44</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Menginisialisasi project dengan git init dan mencoba clone</span>
+                                                <span class="text-muted">06:12</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Menambahkan file baru, dan melakukan git add</span>
+                                                <span class="text-muted">03:47</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Reset
+                                                    perubahan file dengan git reset</span>
+                                                <span class="text-muted">01:54</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Melakukan
+                                                    commit, mempraktekkan diff dan log</span>
+                                                <span class="text-muted">06:51</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Melakukan
+                                                    unggah file dengan git push</span>
+                                                <span class="text-muted">08:52</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Melakukan
+                                                    unduh file dengan git pull</span>
+                                                <span class="text-muted">03:16</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Bermain
+                                                    main dengan fetch dan branch</span>
+                                                <span class="text-muted">05:21</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Membuat
+                                                    branch baru, melakukan checkout</span>
+                                                <span class="text-muted">07:31</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Menyatukan branch satu dengan lainnya, git merge</span>
+                                                <span class="text-muted">03:44</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                    Menyelesaikan Konflik pada GIT</span>
+                                                <span class="text-muted">07:23</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,7 +335,111 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <div class="modal-body">
+                            <div class="accordion" id="accordionGitPemula">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingGitPemula">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseGitPemula" aria-expanded="true"
+                                            aria-controls="collapseGitPemula">
+                                            Belajar Git Pemula
+                                        </button>
+                                    </h2>
+                                    <div id="collapseGitPemula" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingGitPemula" data-bs-parent="#accordionGitPemula">
+                                        <div class="accordion-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Pendahuluan</span>
+                                                    <span class="text-muted">11:40</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Panduan
+                                                        Instalasi GIT</span>
+                                                    <span class="text-muted">03:38</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Macam-macam Perintah GIT Dasar</span>
+                                                    <span class="text-muted">02:44</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Menginisialisasi project dengan git init dan mencoba
+                                                        clone</span>
+                                                    <span class="text-muted">06:12</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Menambahkan file baru, dan melakukan git add</span>
+                                                    <span class="text-muted">03:47</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT Reset
+                                                        perubahan file dengan git reset</span>
+                                                    <span class="text-muted">01:54</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Melakukan
+                                                        commit, mempraktekkan diff dan log</span>
+                                                    <span class="text-muted">06:51</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Melakukan
+                                                        unggah file dengan git push</span>
+                                                    <span class="text-muted">08:52</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Melakukan
+                                                        unduh file dengan git pull</span>
+                                                    <span class="text-muted">03:16</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Bermain
+                                                        main dengan fetch dan branch</span>
+                                                    <span class="text-muted">05:21</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Membuat
+                                                        branch baru, melakukan checkout</span>
+                                                    <span class="text-muted">07:31</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Menyatukan branch satu dengan lainnya, git merge</span>
+                                                    <span class="text-muted">03:44</span>
+                                                </li>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><i class="fa fa-play-circle me-2 text-secondary"></i>GIT
+                                                        Menyelesaikan Konflik pada GIT</span>
+                                                    <span class="text-muted">07:23</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -798,6 +972,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- Stats Data -->
+    <script>
+        fetch("https://apps.cpdev.cloudapp.web.id/api/developerhandal_edgeone/dashboard/statistics")
+            .then(res => res.json())
+            .then(statistics => {
+                const statisticsSection = document.getElementById("stats");
+
+                statisticsSection.innerHTML = `
+                    <div class="container">
+                        <div class="stats-banner-content">
+                            <div class="stats-banner-left">
+                            <div class="stat-box">
+                                <div class="stat-value">${statistics.total_registered || 0}</div>
+                                <div class="stat-label-banner">Total Pendaftar</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">${statistics.total_approved || 0}</div>
+                                <div class="stat-label-banner">Lulus Seleksi</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">${statistics.remaining_quota || 0}</div>
+                                <div class="stat-label-banner">Kuota Tersisa</div>
+                            </div>
+                            </div>
+                            <div class="stats-banner-right">
+                            <div class="stats-info">
+                                <strong>Informasi:</strong> Jumlah kuota akan terus berkurang sesuai dengan jumlah peserta yang
+                                telah menuntaskan misi dan klaim beasiswa
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+    </script>
+
 
     <!-- Testimony Data -->
     <script>
