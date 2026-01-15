@@ -1,0 +1,68 @@
+[
+    {
+      "id": "topic1",
+      "title": "Fondasi & Evolusi Infrastruktur Web",
+      "expanded": true,
+      "lessons": [
+        "Konsep dasar web deployment",
+        "Jenis-jenis Hosting (Perbedaan antara Shared, Dedicated, Baremetal, dan Cloud Hosting)"
+      ]
+    },
+    {
+      "id": "topic2",
+      "title": "PaaS & Revolusi Edge Computing",
+      "expanded": false,
+      "lessons": [
+        "Peran PaaS dalam development modern",
+        "Memahami PaaS: Platform untuk Pengembangan Aplikasi",
+        "Sebelum dan Sesudah PaaS: Dampak pada Time-to-Market",
+        "Mari berkenalan dengan Tencent EdgeOne",
+        "Mengintip singkat berbagai fitur EdgeOne"
+      ]
+    },
+    {
+      "id": "topic3",
+      "title": "Mengenal EdgeOne",
+      "expanded": false,
+      "lessons": [
+        "Mendaftar dan login ke Console",
+        "Mengenal berbagai fitur EdgeOne",
+        "Klaim free Trial"
+      ]
+    },
+    {
+      "id": "topic4",
+      "title": "Deep Dive EdgeOne Pages (Instant Deploy)",
+      "expanded": false,
+      "lessons": [
+        "Cara kerja dan konsep Instant Deploy",
+        "Framework Agnostic: Mendalami dukungan untuk React, Vue, Svelte, hingga SSR",
+        "3 Jalur Deployment",
+        "Version Control: Memahami Preview URL per commit dan cara Rollback jika terjadi error",
+        "The Magic of Pages: Konsep Build, Auto-publish, dan Global Distribution",
+        "Fitur EdgeOne Pages Lain-nya",
+        "EdgeOne IDE Plugin",
+        "Github Action",
+        "EdgeOne CLI"
+      ]
+    },
+    {
+      "id": "topic5",
+      "title": "Studi Kasus 1: Membangun Landing Page Produk “Parfume” untuk Iklan",
+      "expanded": false,
+      "lessons": [
+        "Pengenalan Tools (Copilot, LLM Model, Contentful CMS, EdgeOne Pages, Etc.)",
+        "Demo hasil akhir yang diharapkan",
+        "Data Management: Menyiapkan content model dan entry di Contentful CMS",
+        "Storage: Mengunggah gambar produk di Tencent Cloud Object Storage (COS)",
+        "Backend: Menyiapkan API dengan Postman",
+        "Copywriting & CTA: Menyusun narasi persuasif untuk Landing Page",
+        "Prototyping: Menyiapkan Proyek ReactJs",
+        "Integrasi Contentful CMS untuk katalog produk di ReactJs",
+        "Deployment: Publish ke EdgeOne dan konfigurasi Subdomain",
+        "Testing & QA: Uji coba fungsionalitas dan performa",
+        "Melakukan Custom Domain",
+        "Smart Features: Implementasi EdgeOne AI (LLM: Open AI) untuk fitur rekomendasi parfum sesuai karakter pribadi"
+      ]
+    }
+  ]

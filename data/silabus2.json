@@ -1,0 +1,44 @@
+[
+    {
+      "id": "topic5",
+      "title": "Studi Kasus 1: Membangun Landing Page Produk “Parfume” untuk Iklan",
+      "expanded": true,
+      "lessons": [
+        "Pengenalan Tools (Copilot, LLM Model, Contentful CMS, EdgeOne Pages, Etc.)",
+        "Demo hasil akhir yang diharapkan",
+        "Data Management: Menyiapkan content model dan entry di Contentful CMS",
+        "Storage: Mengunggah gambar produk di Tencent Cloud Object Storage (COS)",
+        "Backend: Menyiapkan API dengan Postman",
+        "Copywriting & CTA: Menyusun narasi persuasif untuk Landing Page",
+        "Prototyping: Menyiapkan Proyek ReactJs",
+        "Integrasi Contentful CMS untuk katalog produk di ReactJs",
+        "Deployment: Publish ke EdgeOne dan konfigurasi Subdomain",
+        "Testing & QA: Uji coba fungsionalitas dan performa",
+        "Melakukan Custom Domain",
+        "Smart Features: Implementasi EdgeOne AI (LLM: Open AI) untuk fitur rekomendasi parfum sesuai karakter pribadi"
+      ]
+    },
+    {
+      "id": "topic6",
+      "title": "Studi Kasus 2: Membangun Aplikasi “NanoConnect” - Solusi Iklan Murah untuk SME",
+      "expanded": false,
+      "lessons": [
+        "Introduction & Environment Setup",
+        "Pembuatan Proyek dengan ReactJs",
+        "Arsitektur Data & Storage (The Backend)",
+        "Membangun 'Smart Matching Engine'",
+        "Security & Trust (Melindungi Transaksi)",
+        "Monitoring & Optimization"
+      ]
+    },
+    {
+      "id": "topic7",
+      "title": "Kesimpulan & Next Steps",
+      "expanded": false,
+      "lessons": [
+        "Summary: Bagaimana EdgeOne memangkas biaya server dan meningkatkan pengalaman pengguna",
+        "Next Step: Skalabilitas Website/app ke tingkat internasional menggunakan infrastruktur global Tencent",
+        "Bergabung ke komunitas, offline meetup, zoom meeting atau eksplorasi fitur advanced lainnya. Belajar topic lainnya, diluar online course ini terkait produk EdgeOne atau Tencent Cloud."
+      ]
+    }
+  ]
