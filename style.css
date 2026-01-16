@@ -346,13 +346,12 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 10vw, 2rem);
+    font-size: clamp(2.5rem, 10vw, 2.7rem);
     font-weight: 900;
     line-height: 1.1;
     color: #FFFFFF;
     margin-bottom: 24px;
     letter-spacing: -2px;
-    font-style: italic;
 }
 
 .highlight-text {
@@ -1731,6 +1730,23 @@ body {
 
 .step-arrow {
     display: none;
+}
+
+.btn-step {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-step:hover {
+    background: white;
+    color: #000000;
 }
 
 /* === RESPONSIVE DESIGN === */
