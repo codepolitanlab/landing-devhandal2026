@@ -135,39 +135,39 @@
 
     <!-- Leaderboard Data -->
     <script>
-        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/leaderboard")
+        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/leaderboard?limit=20")
             .then(res => res.json())
             .then(leaderboard => {
                 const list = document.getElementById("leaderboard-list");
 
-                if (!leaderboard || leaderboard.data?.length === 0) {
+                if (!leaderboard || leaderboard.data?.length === 0 || leaderboard.data.filter(item => item.score === 0)) {
                     list.innerHTML = `
                         <div class="d-flex align-items-center justify-content-center min-vh-100">
                             <p class="text-dark">Data belum tersedia.</p>
                         </div>
                     `;
+                } else {
+                    leaderboard?.data.forEach(item => {
+                        list.innerHTML += `
+                         <div class="leaderboard-item d-flex align-items-center py-3 px-4 mb-3 rounded shadow-sm"
+                                style="background:#f8f9fa;">
+                                <div class="leaderboard-index fw-bold fs-3 text-primary me-4"
+                                    style="width:40px;text-align:center;">${item.rank}</div>
+                                <img src="${item.avatar || "https://image.web.id/images/Avatar.jpg"}"
+                                    alt="Avatar" class="rounded-circle me-3"
+                                    style="width:56px;height:56px;object-fit:cover;">
+                                <div class="flex-grow-1">
+                                    <div class="fw-semibold fs-5 mb-1 text-dark">${item.name}</div>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center align-items-center ms-4"
+                                    style="min-width:100px;">
+                                    <div class="leaderboard-points fw-bold fs-2 text-primary">${item.score}</div>
+                                    <span>Poin</span>
+                                </div>
+                            </div>
+                        `;
+                    });
                 }
-
-                leaderboard?.data.forEach(item => {
-                    list.innerHTML += `
-                     <div class="leaderboard-item d-flex align-items-center py-3 px-4 mb-3 rounded shadow-sm"
-                            style="background:#f8f9fa;">
-                            <div class="leaderboard-index fw-bold fs-3 text-primary me-4"
-                                style="width:40px;text-align:center;">${item.rank}</div>
-                            <img src="${item.avatar}"
-                                alt="Avatar" class="rounded-circle me-3"
-                                style="width:56px;height:56px;object-fit:cover;">
-                            <div class="flex-grow-1">
-                                <div class="fw-semibold fs-5 mb-1 text-dark">${item.name}</div>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center ms-4"
-                                style="min-width:100px;">
-                                <div class="leaderboard-points fw-bold fs-2 text-primary">${item.score}</div>
-                                <span>Poin</span>
-                            </div>
-                        </div>
-                    `;
-                });
             });
     </script>
 
