@@ -140,7 +140,7 @@
             .then(leaderboard => {
                 const list = document.getElementById("leaderboard-list");
 
-                if (!leaderboard || leaderboard.data?.length === 0 || leaderboard.data.filter(item => item.score === 0)) {
+                if (!leaderboard || leaderboard.data?.length === 0) {
                     list.innerHTML = `
                         <div class="d-flex align-items-center justify-content-center min-vh-100">
                             <p class="text-dark">Data belum tersedia.</p>
