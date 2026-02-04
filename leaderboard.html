@@ -135,7 +135,7 @@
 
     <!-- Leaderboard Data -->
     <script>
-        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/leaderboard?limit=20")
+        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/leaderboard?limit=10")
             .then(res => res.json())
             .then(leaderboard => {
                 const list = document.getElementById("leaderboard-list");
