@@ -887,11 +887,12 @@
                     list.innerHTML += `
                     <div class="testimony-card">
                         <div class="testimony-header">
-                            <img src="${item.thumbnail}" alt="${item.name}"
-                                class="testimony-avatar">
+                            <div>
+                                <img src="${item.thumbnail}" alt="${item.name}" class="testimony-avatar">
+                            </div>
                             <div class="testimony-meta">
                                 <h4 class="testimony-name">${item.name}</h4>
-                                <span class="testimony-ig">${item.instagram}</span>
+                                <span class="testimony-ig">${item.location}</span>
                             </div>
                         </div>
                         <p class="testimony-text">"${item.description}"</p>
