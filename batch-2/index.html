@@ -79,7 +79,7 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a class="logo-container" href="/#">
+                <a class="logo-container" href="#">
                     <img src="images/logo-devhandal-white.png"
                         alt="Beasiswa DevHandal 2026: Kuasai Full Stack AI & Edge Computing" class="header-logo">
                 </a>
@@ -93,9 +93,9 @@
 
                 <!-- Navigation Menu -->
                 <nav class="nav-menu" id="navMenu">
-                    <a href="#benefits" class="nav-link">Benefit</a>
                     <a href="#steps" class="nav-link">Cara Gabung</a>
                     <a href="#missions" class="nav-link">Misi</a>
+                    <a href="#prizes" class="nav-link">Benefit</a>
                     <div class="header-buttons">
                         <a href="#daftar" class="btn btn-primary">DAFTAR SEKARANG</a>
                     </div>
@@ -134,7 +134,7 @@
                     </p>
                 </div>
                 <div class="hero-image">
-                    <img src="https://image.web.id/images/clipboard-image-1785756782.png" alt="DevHandal Hero">
+                    <img src="https://image.web.id/images/clipboard-image-1785827606.png" alt="DevHandal Hero">
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
     <!-- Program Overview -->
     <section class="program-overview" id="overview">
         <div class="container">
-            <h2 class="section-title">Kolaborasi Global untuk Developer Lokal</h2>
+            <h2 class="section-title">Kolaborasi Global untuk <br /> Developer Lokal</h2>
             <div class="glass-card">
                 <div class="glass-card-content">
                     <div class="overview-icon">
@@ -251,7 +251,8 @@
                             <p class="quest-description">Lampirkan hashtag #TencentEdgeOne #EdgeOneMakers #DevHandal dan
                                 sertai postingan kamu dengan copywriting
                                 juga gambar Tencent EdgeOne</p>
-                            <div class="quest-points">Reward Kelas Revolusi Deployment dan Fullstack AI NanoConnect
+                            <div class="quest-points">Kelas Revolusi Deployment + Fullstack AI NanoConnect + 5 Juta
+                                Token API EdgeOne
                             </div>
                         </div>
                     </div>
@@ -277,7 +278,7 @@
     </section>
 
     <!-- Lucky Draw Section -->
-    <section class="lucky-draw-section">
+    <section class="lucky-draw-section" id="prizes">
         <div class="container">
             <div class="lucky-draw-grid">
                 <div class="lucky-draw-text" data-aos="fade-right">
@@ -289,7 +290,7 @@
                     </p>
                 </div>
                 <div class="lucky-draw-image" data-aos="fade-left">
-                    <img class="img-fluid w-100 h-100" src="https://image.web.id/images/Group-11194.png"
+                    <img class="img-fluid w-100 h-100" src="https://image.web.id/images/clipboard-image-1785827294.png"
                         alt="Lucky Draw Prizes">
                 </div>
             </div>
@@ -672,7 +673,7 @@
             setInterval(update, 1000);
         }
 
-        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/statistics")
+        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/statistics?program=Batch 2")
             .then(res => res.json())
             .then(statistics => {
                 const statisticsSection = document.getElementById("stats");
