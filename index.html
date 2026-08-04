@@ -739,7 +739,7 @@
 
     <!-- Stats Data -->
     <script>
-        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/statistics")
+        fetch("https://apps.codepolitan.com/api/developerhandal_edgeone/dashboard/statistics?program=DHB1")
             .then(res => res.json())
             .then(statistics => {
                 const statisticsSection = document.getElementById("stats");
