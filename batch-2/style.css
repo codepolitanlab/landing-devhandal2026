@@ -928,9 +928,12 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 40px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .stat-item {
@@ -1781,7 +1784,7 @@ body {
     }
 
     .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .benefits-grid {
@@ -2140,6 +2143,104 @@ body {
 
     .lucky-draw-description {
         margin: 0 auto;
+    }
+}
+
+/* === BEST ARTICLE / VIDEO SECTION === */
+.best-article-section {
+    padding: var(--section-padding);
+    background-color: #000000;
+    background-image: url('https://image.web.id/images/clipboard-image-1785994088.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.best-article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.best-article-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #38BDF8;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+}
+
+.best-article-title {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.best-article-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.best-article-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.best-article-list li i {
+    color: #38BDF8;
+    font-size: 20px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.best-article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .best-article-section {
+        position: relative;
+    }
+
+    .best-article-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+    }
+
+    .best-article-section .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .best-article-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .best-article-list {
+        text-align: left;
     }
 }
 
