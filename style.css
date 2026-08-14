@@ -2188,6 +2188,18 @@ body {
     line-height: 1.2;
 }
 
+.best-article-text {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 520px;
+}
+
+.best-article-text strong {
+    color: #38BDF8;
+}
+
 .best-article-list {
     list-style: none;
     padding: 0;
@@ -2252,6 +2264,11 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
+    }
+
+    .best-article-text {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .best-article-list {
