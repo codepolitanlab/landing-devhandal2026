@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Redirect Referral -->
+    <script>
+        (function () {
+            var urlParameters = new URLSearchParams(window.location.search);
+            var referralCode = urlParameters.get('ref');
+
+            if (referralCode && referralCode.trim() !== '') {
+                var redirectUrl = 'http://codepolitan.com/login?callback=https://www.codepolitan.com/dashboard/devhandal2026-batch-2?ref='
+                    + encodeURIComponent(referralCode.trim());
+                window.location.replace(redirectUrl);
+            }
+        })();
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>DevHandal 2026 Batch 2: Inspiring Experience dengan Tencent EdgeOne</title>
     <meta name="title" content="DevHandal 2026 Batch 2: Inspiring Experience dengan Tencent EdgeOne" />
