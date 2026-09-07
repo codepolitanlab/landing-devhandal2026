@@ -409,6 +409,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .hero-image img {
@@ -418,6 +419,62 @@ body {
     object-fit: contain;
     border-radius: 20px;
     /* Ensure it floats right or center */
+}
+
+.hero-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92px;
+    height: 92px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 34px;
+    text-decoration: none;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-play-button i {
+    margin-left: 6px;
+}
+
+.hero-play-button::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border: 2px solid rgba(0, 229, 255, 0.55);
+    border-radius: 50%;
+    animation: hero-play-pulse 2s ease-out infinite;
+}
+
+.hero-play-button:hover {
+    background: rgba(0, 229, 255, 0.9);
+    border-color: #00E5FF;
+    color: #FFFFFF;
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.7);
+}
+
+@keyframes hero-play-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 992px) {
@@ -439,6 +496,19 @@ body {
 
     .hero-microcopy {
         justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-play-button {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+        border-width: 2px;
+    }
+
+    .hero-play-button i {
+        margin-left: 4px;
     }
 }
 
