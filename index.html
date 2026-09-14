@@ -696,7 +696,7 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">15 September 2026</div>
+                    <div class="timeline-date">16 September 2026</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">
                             Penutupan Submission
@@ -832,13 +832,12 @@
     <!-- Stats Data -->
     <script>
         function initCountdown() {
-            // Batas akhir submission: 15 September 2026 pukul 17.00 WIB (UTC+7)
-            const submissionDeadline = new Date("2026-09-15T17:00:00+07:00");
+            const target = new Date(2026, 8, 16, 23, 59, 59);
 
             const update = () => {
-                const remainingMilliseconds = submissionDeadline - Date.now();
+                const diff = target - Date.now();
 
-                if (remainingMilliseconds <= 0) {
+                if (diff <= 0) {
                     document.getElementById("cd-days").textContent = "00";
                     document.getElementById("cd-hours").textContent = "00";
                     document.getElementById("cd-minutes").textContent = "00";
@@ -846,10 +845,10 @@
                     return;
                 }
 
-                const days = Math.floor(remainingMilliseconds / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((remainingMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((remainingMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((remainingMilliseconds % (1000 * 60)) / 1000);
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
                 document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
                 document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
